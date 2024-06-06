@@ -1,38 +1,41 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: 'Poppins' sans-serif;
+    box-sizing: border-box;
 }
 body {
     width: 100%;
-    background: #f4f4f4;
-    display: flex;
+    height: 100%;
+    background: linear-gradient(45deg, #f4c5b1, #57a6f5);
+    background-attachment: fixed;
+    display: flex ;
     flex-direction: column;
     align-items: center;
-    margin-top: 50px;
+    justify-content: center;
+    margin:20px;
+    
 }
-.border {
-    padding: 30px;
-    border-radius:30px;
-    box-shadow: 0 0  8px 8px #999898;
-}
+
 .direct {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
 }
+
 .young {
-    font-size: 25px;
+    font-size: 35px;
     color:#484747;
     text-shadow: 3px 3px 3px #ababab;
     width:400px;
     font-family: "Audiowide";
     margin-top:20px;
+    margin-left: 2rem;
     font-family: 'Brush Script MT', cursive;
 }
 .wish {
     font-size: 55px;
+    text-align: center;
     font-family: 'Brush Script MT', cursive;
     font-variant: small-caps;
     background: -webkit-linear-gradient(0deg,  rgba(255,0,1 ) 10%,rgba(78, 34, 189, 1) 59%, rgba(229,153,46,1) 100%);
@@ -40,19 +43,41 @@ body {
     -webkit-text-fill-color: transparent;
     font-weight: bolder;
 }
-.wish1, .wish2, .wish3 {
+.wishes {
+    display: block;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
     color:#484747;
-    text-shadow: 3px 3px 3px #ababab;
-    width:400px;
+    text-shadow: 3px 3px 3px #828282;
+    font-size: 25px;
     font-family: "Audiowide";
-    margin-top:20px;
-    background-image: url('shabby-paper.png');
-    background-size:cover;
+    
+}
+.wish1 {
+    width:250px;
+    font-size: 25px;
+    margin-top:40px;
+    margin-left: 12rem;
+    border-radius: 10px; 
+}
+.wish2 {
+    width:250px;
+    margin-top:70px;
+    margin-left: 1rem;
+    border-radius: 10px;
+} .wish3 {
+    width:250px;
+    margin-top:70px;
+    margin-left: 12rem;
+    border-radius: 10px;
+}
+.one {
+    font-size: 40px;
 }
 .calendar {
     width: 200px;
     height: 200px;
-    background: #fff;
+    background: rgb(227, 227, 227);
     box-shadow: 4px 4px  8px 1px #555555;
     display: flex;
     border-radius: 30px;
@@ -66,7 +91,7 @@ body {
     align-items: center;
     justify-content: center;
     font-size: 25px;
-    line-height: 1.8;
+    line-height: 1.6;
     font-weight: bold;
     
 }
@@ -86,7 +111,7 @@ body {
 .age {
     width: 200px;
     height: 200px;
-    background: #fff;
+    background: rgb(227, 227, 227);
     box-shadow: 4px 4px  8px 1px #555555;
     display: flex;
     align-items: center;
@@ -104,8 +129,5 @@ body {
     text-shadow: 3px 3px 3px #ababab;
 }
 @media screen and (max-width:600px) {
-     .young {
-        font-size: 20px;
-        line-height: 50px;
-     }
+    
 }

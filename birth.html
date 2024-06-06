@@ -9,11 +9,19 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Audiowide"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
   </head>
   <body>
     <audio autoplay loop>
       <source
-        src="C:/Users/sande/Desktop/MySpace/MyProgramSpcae/Birthday/music.mp3"
+        src=music.mp3"
         type="audio/mp3"
       />
     </audio>
@@ -35,7 +43,9 @@
           </div>
           <div class="age">
             <div class="right1">
-              <p>Age</p>
+              <p>
+                <i onmousedown="s.play()" id="start" class="fa fa-play"></i>Age
+              </p>
               <p>18 years</p>
             </div>
           </div>
@@ -59,5 +69,10 @@
         <p class="wish4">"You don't get older, you get better."</p>
       </div>
     </div>
+    <script>
+      var s = new Audio();
+      s.src =
+        "music.mp3";
+    </script>
   </body>
 </html>

@@ -19,10 +19,10 @@
     />
   </head>
   <body>
-    <audio autoplay loop>
+    <audio autoplay id="song" loop>
       <source
-        src=music.mp3"
-        type="audio/mp3"
+        src="music.mp3"
+        type="audio/mpeg"
       />
     </audio>
     <div class="border">
@@ -44,35 +44,56 @@
           <div class="age">
             <div class="right1">
               <p>
-                <i onmousedown="s.play()" id="start" class="fa fa-play"></i>Age
+                <i onclick="playPause()" id="ctrIcon" class="fa fa-play"></i>Age
               </p>
               <p>18 years</p>
             </div>
           </div>
         </div>
         <p class="young">
-          "Hey, you're still younger than you will be next year 🥳"
+          "Hey😜, you're still younger than you will be next year 🥳"
         </p>
       </div>
       <div class="wishes">
         <p class="wish1">
-          "To a special person, I wish you Never ending happiness!"
+          "To a special person❤️, I wish you Never ending happiness!🥰"
         </p>
         <p class="wish2">
-          "A Day filled with Love, Laughter,and all the things that make you
-          Happy"
+          "A Day filled with Love❤️, Laughter,and all the things that make you
+          Happy🥰"
         </p>
         <p class="wish3">
-          "On this special day, may sun shine a little brighter, the smiles be
-          bit wider and joy be endless"
+          "On this special day❤️, may sun shine a little brighter, the smiles😊
+          be bit wider and joy🥳 be endless"
         </p>
-        <p class="wish4">"You don't get older, you get better."</p>
+        <p class="wish4">"You don't get older, you get better❤️."</p>
+        <p class="wish3">May your birthday🎂 be as amazing as you are❤️</p>
       </div>
     </div>
     <script>
       var s = new Audio();
-      s.src =
+      playPause.src =
         "music.mp3";
+      let song = document.getElementById("song");
+      let ctrIcon = document.getElementById("ctrIcon");
+
+      function playPause() {
+        if (ctrIcon.classList.contains("fa-pause")) {
+          song.pause();
+
+          ctrIcon.classList.remove("fa-pause");
+
+          ctrIcon.classList.add("fa-play");
+
+          I;
+        } else {
+          song.play();
+
+          ctrIcon.classList.add("fa-pause");
+
+          ctrIcon.classList.remove("fa-play");
+        }
+      }
     </script>
   </body>
 </html>

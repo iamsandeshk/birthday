@@ -19,36 +19,35 @@
     />
   </head>
   <body>
-    <audio autoplay id="song" loop>
+    <header>
+      <p class="wish">hAPPy BiRtHDaY!🎊</p>
+    </header>
+    <section class="banner"></section>
+    <audio id="song" loop>
       <source
         src="music.mp3"
-        type="audio/mpeg"
+        type="audio/mp3"
       />
     </audio>
     <div class="border">
-      <div>
-        <p class="wish">hAPPy BiRtHDaY!🎊</p>
-      </div>
       <div class="row">
         <div class="direct">
           <div class="calendar">
             <div class="left">
               <p class="one">01</p>
-              <p>MoNdAY</p>
+              <p>jUlY</p>
             </div>
             <div class="right">
-              <p>jUlY</p>
               <p>2K24</p>
             </div>
           </div>
           <div class="age">
             <div class="right1">
-              <p>
-                <i onclick="playPause()" id="ctrIcon" class="fa fa-play"></i>Age
-              </p>
+              <p>Age</p>
               <p>18 years</p>
             </div>
           </div>
+          <i onclick="playPause()" id="ctrIcon" class="fa fa-play"></i>
         </div>
         <p class="young">
           "Hey😜, you're still younger than you will be next year 🥳"
@@ -94,6 +93,15 @@
           ctrIcon.classList.remove("fa-play");
         }
       }
+      window.addEventListener("scroll", function () {
+        var header = document.querySelector("header");
+        header.classList.toggle("sticky", window.scrollY > 0);
+      });
     </script>
   </body>
+  <footer>
+    <a href="https://wa.me/+919353173113?text=ThANk YoU" target="_blank"
+      >Say ThAnK <i class="fa-brands fa-whatsapp" style="color: #24d65f"></i
+    ></a>
+  </footer>
 </html>

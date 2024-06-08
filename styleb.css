@@ -5,9 +5,9 @@
 }
 body {
     width: 100%;
-    height: 100%;
-    background: linear-gradient(45deg, #f4c5b1, #57a6f5);
-    background-attachment: cover;
+    min-height: 100vh;
+    background: linear-gradient(45deg, #f4c5b1, #58a4f0);
+    background-attachment: fixed;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -22,10 +22,16 @@ body {
     align-items: center;
     justify-content: center;
 }
-#ctrIcon {
+ #ctrIcon {
+    position: absolute;
+    z-index: 1;
+    top:10.3em;
+    left:2.5em;
     border-radius: 35%;
-    box-shadow: 0 0 3px 3px rgba(47, 47, 47, 0.286) ;
-    color: rgb(136, 136, 136);
+    background-color:red;
+    color: #fff;
+    outline: 3px solid ;
+    box-shadow: 4px 4px 8px 3px rgb(227, 227, 227);
     width: 50px;
     height: 50px;
     font-size: 25px;
@@ -37,11 +43,11 @@ body {
     align-items: center;
 }
 #ctrIcon:hover {
-    border:1px solid #555555
+    background-color: rgb(199, 13, 13);
     
 }
 #ctrIcon:active{
-    border : 2px solid rgba(77, 210, 143, 0.758);
+    background-color: #dedede;
 }
 .young {
     font-size: 35px;
@@ -53,15 +59,39 @@ body {
     margin-left: 25px;
     font-family: 'Brush Script MT', cursive;
 }
-.wish {
-    font-size: 40px;
+header {
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    transition: 0.6s;
+    display:inline-flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     text-align: center;
+    font-size: 22.5px;
     font-family: 'Brush Script MT', cursive;
     font-variant: small-caps;
     background: -webkit-linear-gradient(0deg,  rgba(255,0,1 ) 10%,rgba(78, 34, 189, 1) 59%, rgba(229,153,46,1) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-weight: bolder;
+    font-weight:900;
+    padding: 40px 100px;
+    z-index: 10000;
+}
+header.sticky {
+    padding: 5px 100px;
+    background: #ffffff95;
+}
+header.sticky .wish {
+    background: -webkit-linear-gradient(0deg,  rgba(255,0,1 ) 10%,rgba(78, 34, 189, 1) 59%, rgba(229,153,46,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.wish::-webkit-scrollbar {
+    position: fixed;
+    background-color: #fff;
 }
 .wishes {
     display: block;
@@ -94,7 +124,7 @@ body {
     box-shadow: 4px 4px  8px 1px #555555;
     display: flex;
     border-radius: 30px;
-    margin-top: 20px;
+    margin-top: 70px;
     margin-right: 15px;
     margin-left: 15px;
     margin-bottom: 20px;
@@ -104,7 +134,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    font-size: 25px;
+    font-size: 30px;
     line-height: 1.6;
     font-weight: bold;
     
@@ -113,6 +143,8 @@ body {
     width: 70%;
     background: red;
     color:#fff;
+    writing-mode: vertical-lr;
+    text-orientation: upright;
     text-shadow: 3px 3px 3px #9d1616;
     border-top-right-radius: 30px;
     border-bottom-right-radius:30px;
@@ -127,6 +159,7 @@ body {
     height: 180px;
     background: rgb(227, 227, 227);
     box-shadow: 4px 4px  8px 1px #555555;
+    margin-top: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -145,3 +178,19 @@ body {
     margin-top: -20px;
     text-shadow: 3px 3px 3px #ababab;
 }
+footer a:link, a:visited {
+    background-color: #fff;
+    border-radius: 30px;
+    margin: 50px;
+    font-size: 20px;
+    font-weight: bolder;
+    color: rgb(30, 30, 30);
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+  }
+footer a:hover, a:active {
+    background-color: #e1e0e0;
+    padding: 13.5px 24.5px;
+  }

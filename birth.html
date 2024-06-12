@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Birthday</title>
+    <title>Happy-Birthday</title>
     <link rel="stylesheet" href="styleb.css" />
     <link
       rel="stylesheet"
@@ -20,12 +20,12 @@
   </head>
   <body>
     <header>
-      <p class="wish">hAPPy BiRtHDaY!🎊</p>
+      <p class="happy">hAPPy <span class="auto-type"></span></p>
     </header>
     <section class="banner"></section>
     <audio id="song" loop>
       <source
-        src="music.mp3"
+        src="C:/Users/sande/Desktop/MySpace/MyProgramSpcae/Birthday/music.mp3"
         type="audio/mp3"
       />
     </audio>
@@ -53,7 +53,8 @@
           "Hey😜, you're still younger than you will be next year 🥳"
         </p>
       </div>
-      <div class="wishes">
+      <button onclick="showhide(this)" id="reveal">Tap to see</button>
+      <div id="invisible">
         <p class="wish1">
           "To a special person❤️, I wish you Never ending happiness!🥰"
         </p>
@@ -61,18 +62,42 @@
           "A Day filled with Love❤️, Laughter,and all the things that make you
           Happy🥰"
         </p>
-        <p class="wish3">
+        <p class="wish1">
           "On this special day❤️, may sun shine a little brighter, the smiles😊
           be bit wider and joy🥳 be endless"
         </p>
-        <p class="wish4">"You don't get older, you get better❤️."</p>
-        <p class="wish3">May your birthday🎂 be as amazing as you are❤️</p>
+        <p class="wish2">"You don't get older, you get better❤️."</p>
+        <p class="wish1">May your birthday🎂 be as amazing as you are❤️</p>
       </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script>
+      function showhide(event) {
+        event.innerHTML = "Tap to hide";
+      }
+
+      function showhide(event) {
+        var x = document.getElementById("invisible");
+
+        if (x.style.display === "block") {
+          x.style.display = "none";
+          event.innerHTML = "Tap to see";
+        } else {
+          x.style.display = "block";
+          event.innerHTML = "Tap to hide";
+        }
+      }
+
+      var typed = new Typed(".auto-type", {
+        strings: ["BiRthdAY", "DAy🎊", "VibES🎊"],
+        typeSpeed: 150,
+        backSpeed: 150,
+        loop: true,
+      });
+
       var s = new Audio();
       playPause.src =
-        "music.mp3";
+        "C:/Users/sande/Desktop/MySpace/MyProgramSpcae/Birthday/music.mp3";
       let song = document.getElementById("song");
       let ctrIcon = document.getElementById("ctrIcon");
 

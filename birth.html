@@ -17,6 +17,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     />
+    <script src="https://unpkg.com/scrollreveal"></script>
   </head>
   <body>
     <header>
@@ -47,13 +48,12 @@
               <p>18 years</p>
             </div>
           </div>
-          <i onclick="playPause()" id="ctrIcon" class="fa fa-play"></i>
         </div>
+        <i onclick="playPause()" id="ctrIcon" class="fa fa-play"></i>
         <p class="young">
           "Hey😜, you're still younger than you will be next year 🥳"
         </p>
       </div>
-      <button onclick="showhide(this)" id="reveal">Tap to see</button>
       <div id="invisible">
         <p class="wish1">
           "To a special person❤️, I wish you Never ending happiness!🥰"
@@ -69,11 +69,12 @@
         <p class="wish2">"You don't get older, you get better❤️."</p>
         <p class="wish1">May your birthday🎂 be as amazing as you are❤️</p>
       </div>
+      <button onclick="showhide(this)" id="reveal">See It</button>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script>
       function showhide(event) {
-        event.innerHTML = "Tap to hide";
+        event.innerHTML = "Hide it";
       }
 
       function showhide(event) {
@@ -81,10 +82,10 @@
 
         if (x.style.display === "block") {
           x.style.display = "none";
-          event.innerHTML = "Tap to see";
+          event.innerHTML = "See It";
         } else {
           x.style.display = "block";
-          event.innerHTML = "Tap to hide";
+          event.innerHTML = "Hide It";
         }
       }
 
@@ -121,6 +122,25 @@
       window.addEventListener("scroll", function () {
         var header = document.querySelector("header");
         header.classList.toggle("sticky", window.scrollY > 0);
+      });
+
+      ScrollReveal({
+        reset: true,
+        distance: "60px",
+        duration: 2000,
+        delay: 250,
+      });
+      ScrollReveal().reveal(".calendar,#ctrIcon", {
+        delay: 250,
+        origin: "bottom",
+      });
+      ScrollReveal().reveal(".age", {
+        delay: 250,
+        origin: "top",
+      });
+      ScrollReveal().reveal(".young", {
+        delay: 250,
+        origin: "left",
       });
     </script>
   </body>

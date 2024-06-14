@@ -22,7 +22,7 @@ body {
     width: 100%;
     min-height: 100vh;
     background: linear-gradient(45deg, #f4c5b1, #58a4f0);
-    background-attachment: cover;
+    background-attachment: fixed;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -139,7 +139,7 @@ header.sticky .happy {
    border: 2px dotted rgb(40, 40, 40);
    background-color: rgba(226, 226, 217, 0.975);
    border-radius: 25px;
-   margin-left: 11em;
+   margin-left: 13em;
    margin-top: 3.5em;
    transition: transform 0.2s ease;
 }

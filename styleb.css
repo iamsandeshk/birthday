@@ -139,9 +139,9 @@ header.sticky .happy {
    border: 2px dotted rgb(40, 40, 40);
    background-color: rgba(226, 226, 217, 0.975);
    border-radius: 25px;
-   margin-left: 13em;
+   margin-left: 15em;
    margin-top: 3.5em;
-   transition: transform 0.2s ease;
+   transition: transform 1s ease;
 }
 
 #reveal:hover {
@@ -150,7 +150,7 @@ header.sticky .happy {
     background-color: rgba(187, 187, 187, 0.975);
 }
 #reveal:active {
-    transform: scale(0.96);
+    transform: scale(1);
 }
 
 .one {

@@ -80,7 +80,8 @@ header {
     z-index: 10000;
 }
 header.sticky {
-    padding: 15px 40px;
+    padding: 10px 40px;
+    padding-top:25px;
     background: #ffffff6f;
 }
 header.sticky .happy {
@@ -115,6 +116,7 @@ header.sticky .happy {
 } 
 
 #reveal {
+   position: relative;
    color: #484747;
    padding: 15px;
    border: 2px dotted rgb(40, 40, 40);

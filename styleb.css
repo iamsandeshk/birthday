@@ -139,7 +139,7 @@ header.sticky .happy {
    border: 2px dotted rgb(40, 40, 40);
    background-color: rgba(226, 226, 217, 0.975);
    border-radius: 25px;
-   margin-left: 15em;
+   margin-left: 14em;
    margin-top: 3.5em;
    transition: transform 1s ease;
 }

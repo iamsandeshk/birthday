@@ -69,8 +69,11 @@
         <p class="wish2">"You don't get older, you get better❤️."</p>
         <p class="wish1">May your birthday🎂 be as amazing as you are❤️</p>
       </div>
-      <button onclick="showhide(this)" id="reveal">See It</button>
+      <button onclick="showhide(this)" class="reveal" id="reveal">
+        See It
+      </button>
     </div>
+
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script>
       function showhide(event) {
@@ -87,6 +90,11 @@
           x.style.display = "block";
           event.innerHTML = "Hide It";
         }
+        document
+          .getElementsByClassName("border")[0]
+          .addEventListener("click", () => {
+            confetti();
+          });
       }
 
       var typed = new Typed(".auto-type", {
@@ -127,22 +135,19 @@
       ScrollReveal({
         reset: true,
         distance: "60px",
-        duration: 2000,
-        delay: 250,
+        duration: 1500,
+        delay: 150,
       });
       ScrollReveal().reveal(".calendar,#ctrIcon", {
-        delay: 250,
+        delay: 150,
         origin: "bottom",
       });
       ScrollReveal().reveal(".age", {
-        delay: 250,
-        origin: "top",
-      });
-      ScrollReveal().reveal(".young,", {
-        delay: 250,
-        origin: "left",
+        delay: 150,
+        origin: "top"
       });
     </script>
+    <script src="scriptb.js"></script>
   </body>
   <footer>
     <a href="https://wa.me/+919353173113?text=ThANk YoU" target="_blank"

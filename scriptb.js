@@ -124,7 +124,7 @@
                 return h;
               }),
             y = {
-              particleCount: 150,
+              particleCount: 90,
               angle: 90,
               spread: 65,
               startVelocity: 65,

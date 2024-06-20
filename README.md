@@ -5,4 +5,4 @@
 
 | Title | Code | Live Demo |
 | ----- | ---- | --------- |
-|Stopwatch| [Code](https://github.com/iamsandeshk/birthday/tree)| [Demo](https://iamsandeshk.github.io/birthday/birth.html)|
+|B'DAY Surprise| [Code](https://github.com/iamsandeshk/birthday/tree)| [Demo](https://iamsandeshk.github.io/birthday/birth.html)|

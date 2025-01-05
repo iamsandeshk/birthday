@@ -65,7 +65,7 @@
 
 body {
     min-height: 100vh;
-    background: linear-gradient(135deg, #f58989, #f4f39f);
+    background: linear-gradient(135deg, #fc89b1, #ffffff);
     background-size: 400% 400%;
     animation: gradientBG 15s ease infinite;
     background-attachment: fixed;
@@ -95,7 +95,7 @@ body {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    margin-top:20px;
+    margin-top:30px;
     flex-wrap: wrap;
     padding: 0 1rem;
 }
@@ -120,7 +120,7 @@ body {
     align-items: center;
     cursor: pointer;
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    margin: -1.5em 0 0 6.5em;
+    margin: -1.9em 0 0 6.5em;
     animation: pulse 2s infinite;
 }
 
@@ -139,14 +139,14 @@ body {
 
 .young {
     font-size: clamp(28px, 5vw, 42px);
-    color: var(--text-primary);
+    color: rgb(255, 255, 255);
     text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
     width: min(90%, 380px);
     margin: clamp(1rem, 3vw, 2rem) auto;
     line-height: 1.4;
     text-align: center;
     padding: 1rem;
-    background: rgba(255, 255, 255, 0.01);
+    background: rgba(188, 188, 188, 0.05);
     backdrop-filter: blur(8px);
     border-radius: 20px;
     border: 1px solid var(--glass-border);
@@ -172,7 +172,7 @@ header .happy {
     background-size: 200% auto;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
     letter-spacing: 3px;
     animation: shine 3s linear infinite;
 }
@@ -180,15 +180,14 @@ header .happy {
 header.sticky {
     padding: clamp(10px, 2vw, 20px);
     background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(5px);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    border-bottom: 1px solid var(--glass-border);
 }
 
 #invisible {
     display: none;
     color: var(--text-primary);
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
     font-size: clamp(18px, 3vw, 24px);
     position: relative;
     animation: appear 2s 1;
@@ -201,7 +200,8 @@ header.sticky {
     width: min(90%, 350px);
     margin: 2rem auto;
     padding: clamp(1rem, 3vw, 2rem);
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(188, 188, 188, 0.05);
+    color: #ffffff;
     backdrop-filter: blur(8px);
     border-radius: 20px;
     border: 1px solid var(--glass-border);
@@ -229,8 +229,8 @@ header.sticky {
     color: var(--text-primary);
     padding: clamp(12px, 2vw, 20px) clamp(20px, 4vw, 40px);
     border: none;
-    background: var(--glass-bg);
-    backdrop-filter: blur(8px);
+    background: rgba(188, 188, 188, 0.05);
+    backdrop-filter: blur(5px);
     border-radius: 30px;
     margin: 3.5em auto;
     display: block;
@@ -260,8 +260,8 @@ header.sticky {
 
 .calendar, .age {
     position: relative;
-    width: min(90%, 150px);
-    height: clamp(160px, 30vw, 160px);
+    width: min(90%, 130px);
+    height: clamp(140px, 30vw, 140px);
     background: var(--glass-bg);
     backdrop-filter: blur(8px);
     box-shadow: 
@@ -339,7 +339,7 @@ footer {
 }
 
 footer a:link, footer a:visited {
-    background: var(--glass-bg);
+    background: rgba(188, 188, 188, 0.05);
     backdrop-filter: blur(8px);
     border-radius: 30px;
     margin: 2rem 0;

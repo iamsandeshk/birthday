@@ -986,6 +986,35 @@ footer a:active {
         ),
           (t.confetti = e.exports);
       })(window, {});
+
+       // Add floating hearts occasionally
+        setInterval(() => {
+            const heart = document.createElement('div');
+            heart.textContent = '♥';
+            heart.style.position = 'fixed';
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.top = '110vh';
+            heart.style.fontSize = Math.random() * 30 + 20 + 'px';
+            heart.style.color = '#ff6b6b';
+            heart.style.animation = `floatUp ${Math.random() * 3 + 3}s linear`;
+            document.body.appendChild(heart);
+
+            setTimeout(() => heart.remove(), 5000);
+        }, 3000);
+
+        // Add keyframes for animations
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes explode {
+                0% { transform: translate(0, 0); opacity: 1; }
+                100% { transform: translate(${Math.random() * 200 - 100}px, ${Math.random() * 200 - 100}px); opacity: 0; }
+            }
+
+            @keyframes floatUp {
+                to { transform: translateY(-100vh) rotate(360deg); }
+            }
+        `;
+        document.head.appendChild(style);
     </script>
   </body>
   <footer>

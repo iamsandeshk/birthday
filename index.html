@@ -1112,6 +1112,32 @@ style.textContent = `
 `;
 document.head.appendChild(style);
     </script>
+   <script>
+        // Create background particles
+        function createParticles() {
+            const particlesContainer = document.getElementById('particles');
+            const particleCount = 30;
+
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.width = Math.random() * 3 + 1 + 'px';
+                particle.style.height = particle.style.width;
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.top = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 2 + 's';
+                particlesContainer.appendChild(particle);
+            }
+        }
+
+        createParticles();
+
+        // Add slight random rotation to heartbeat
+        const heart = document.querySelector('.heart');
+        setInterval(() => {
+            heart.style.transform = `rotate(${45 + (Math.random() - 0.5) * 2}deg)`;
+        }, 1500);
+   </script>
   </body>
   <footer>
     <a href="https://www.instagram.com/iamsandeshk/" target="_blank">

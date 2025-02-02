@@ -1138,6 +1138,20 @@ document.head.appendChild(style);
         setInterval(() => {
             heart.style.transform = `rotate(${45 + (Math.random() - 0.5) * 2}deg)`;
         }, 1500);
+
+       // Vibration logic
+        function vibrateOnHeartbeat() {
+            const heart = document.querySelector('.heart');
+            const vibrationPattern = [0, 100, 50, 100, 50, 100, 0]; // Vibration pattern in milliseconds
+
+            heart.addEventListener('animationiteration', () => {
+                if (navigator.vibrate) {
+                    navigator.vibrate(vibrationPattern);
+                }
+            });
+        }
+
+        vibrateOnHeartbeat();
    </script>
   </body>
   <footer>

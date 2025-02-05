@@ -1097,7 +1097,7 @@ footer a:active {
 setInterval(() => {
     const heartCount = Math.floor(Math.random() * 2) + 2; // Generates 2 or 3 hearts
     for (let i = 0; i < heartCount; i++) {
-        const heart = document.createElement('div');
+        const heart = document.createElement('.main');
         heart.textContent = '♥';
         heart.style.position = 'fixed';
         heart.style.left = Math.random() * 100 + 'vw';

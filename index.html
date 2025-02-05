@@ -1183,6 +1183,34 @@ document.head.appendChild(style);
 
         vibrateOnHeartbeat();
    </script>
+   <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const video = document.getElementById('birthdayVideo');
+            const mainContent = document.querySelector('.main');
+
+            // Start transition when video starts playing
+            video.addEventListener('play', function() {
+                setTimeout(() => {
+                    video.style.display = 'none';
+                    mainContent.style.display = 'block';
+                    video.pause();
+                }, 6000); // 6 seconds
+            });
+
+            // Handle cases where autoplay might be blocked
+            video.play().catch(error => {
+                // Show play button if autoplay is blocked
+                const playButton = document.createElement('button');
+                playButton.innerHTML = 'Click to Start';
+                playButton.style.position = 'absolute';
+                playButton.style.top = '50%';
+                playButton.style.left = '50%';
+                playButton.style.transform = 'translate(-50%, -50%)';
+                playButton.addEventListener('click', () => video.play());
+                document.body.appendChild(playButton);
+            });
+        });
+   </script>
   </body>
   <footer>
     <a href="https://www.instagram.com/iamsandeshk/" target="_blank">

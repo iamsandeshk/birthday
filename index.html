@@ -603,21 +603,28 @@ footer a:active {
         }
       }
       window.addEventListener("scroll", function () {
-        var header = document.querySelector("header");
-        header.classList.toggle("sticky", window.scrollY > 0);
-      });
+      window.addEventListener("scroll", function () {
+    var header = document.querySelector("header");
+    header.classList.toggle("sticky", window.scrollY > 0);
+});
 
-      ScrollReveal({
-        distance: "60px",
-        duration: 1500,
-        delay: 150,
-      });
-      ScrollReveal().reveal(".calendar,#ctrIcon", {
-        origin: "bottom",
-      });
-      ScrollReveal().reveal(".age", {
-        origin: "top"
-      });
+ScrollReveal({
+    distance: "60px",
+    duration: 1500,
+    delay: 150,
+    reset: true // This ensures that the animation triggers every time the element comes into view
+});
+
+ScrollReveal().reveal(".calendar, #ctrIcon", {
+    origin: "bottom",
+    interval: 200 // This adds a slight delay between each element's reveal
+});
+
+ScrollReveal().reveal(".age", {
+    origin: "top",
+    interval: 200 // This adds a slight delay between each element's reveal
+});
+     
     </script>
     <script>
         !(function (t, e) {

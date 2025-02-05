@@ -1206,6 +1206,7 @@ document.head.appendChild(style);
 
             // Handle cases where autoplay might be blocked
             video.play().catch(error => {
+                console.error('Autoplay was blocked:', error);
                 // Show play button if autoplay is blocked
                 const playButton = document.createElement('button');
                 playButton.innerHTML = 'Click to Start';
@@ -1213,7 +1214,17 @@ document.head.appendChild(style);
                 playButton.style.top = '50%';
                 playButton.style.left = '50%';
                 playButton.style.transform = 'translate(-50%, -50%)';
-                playButton.addEventListener('click', () => video.play());
+                playButton.style.padding = '10px 20px';
+                playButton.style.fontSize = '20px';
+                playButton.style.backgroundColor = '#ff4081';
+                playButton.style.color = '#fff';
+                playButton.style.border = 'none';
+                playButton.style.borderRadius = '5px';
+                playButton.style.cursor = 'pointer';
+                playButton.addEventListener('click', () => {
+                    video.play();
+                    playButton.style.display = 'none';
+                });
                 document.body.appendChild(playButton);
             });
         });
